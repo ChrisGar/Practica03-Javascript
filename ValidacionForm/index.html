@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+    <head>     
+        <meta charset="UTF-8"> 
+        <link href="estilo1.css" rel="stylesheet" />
+        <script type="text/javascript" src="funcionValidacion.js"></script> 
+        <style type="text/css">
+            .error{
+                color: blue;
+                font-size: 15px;
+            }
+        </style>
+        
+    </head> 
+    <body> 
+ 
+    <form id="formulario01" method="POST" action="" onsubmit="return validar()">         
+              
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."onfocus="escribe(this)" onkeyup="this.value = solo_numeros(this.value)""/>
+        <span id="mensajeCedula" class="error"> </span>         
+        <br> 
+ 
+          
+        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..." onkeyup="this.value = solo_letras(this.value)" onchange="this.value = dos_palabras(this.value)"/>  
+        <span id="mensajeNombres" class="error"> </span>
+        <br> 
+ 
+                
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..."onfocus="escribe(this)" onkeyup="this.value = solo_letras(this.value)" onchange="this.value = dos_palabras(this.value)"/>         
+        <br> 
+ 
+               
+        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ... " onfocus="escribe(this)"/>         
+        <br> 
+ 
+       
+        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico ..."onfocus="escribe(this)" onkeyup="this.value = val_numero(this.value)"/>         
+        <br>                 
+ 
+        <label for="fecha" id="fecha">Fecha Nacimiento</label>         
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento ..."onfocus="escribe(this)"/>         
+        <span id="mensajeFecha" class="error"> </span>
+        <br> 
+ 
+                 
+        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..."onfocus="escribe(this)"/>         
+        <span id="mensajeCorreo" class="error"> </span>   
+        <br> 
+ 
+        <input type="submit" id="crear" name="crear" value="Aceptar" />         
+        <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />     
+    </form>   
+    <spam id="p" style="display: none;">Error, Campos Incompletos!</spam>  
+ 
+</body> 
+</html> 
